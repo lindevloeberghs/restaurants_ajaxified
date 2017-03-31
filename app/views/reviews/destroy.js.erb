@@ -1,0 +1,5 @@
+// Reload the reviews div
+$('#reviews').html("<%=j render 'restaurants/show_reviews' %>");
+
+// Reload the reviews counter
+$('#reviews_count').html("<%=j render 'restaurants/review_count', restaurant: @restaurant %>");
