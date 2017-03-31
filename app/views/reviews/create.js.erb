@@ -11,4 +11,6 @@
   new_review.slideDown();
   // Reset the form
   $('#new_review').html("<%= j render 'reviews/form', restaurant: @restaurant, review: Review.new %>");
+  // Reload the reviews counter
+  $('#reviews_count').html("<%=j render 'restaurants/review_count', restaurant: @restaurant %>");
 <% end %>

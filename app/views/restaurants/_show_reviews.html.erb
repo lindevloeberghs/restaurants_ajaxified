@@ -1,0 +1,7 @@
+<% if @restaurant.reviews.blank? %>
+  Be the first to leave a review for <%= @restaurant.name %>
+<% else %>
+  <% @restaurant.reviews.each do |review| %>
+    <%= render 'reviews/review', review: review %>
+  <% end %>
+<% end %>
